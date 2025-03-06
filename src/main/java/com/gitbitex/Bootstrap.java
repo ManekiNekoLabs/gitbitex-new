@@ -184,6 +184,8 @@ public class Bootstrap {
         properties.put("session.timeout.ms", "30000");
         properties.put("auto.offset.reset", "earliest");
         properties.put("max.poll.records", 2000);
+        properties.put("key.deserializer.encoding", "UTF-8");
+        properties.put("value.deserializer.encoding", "UTF-8");
         return properties;
     }
 }

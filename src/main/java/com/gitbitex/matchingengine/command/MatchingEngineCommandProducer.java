@@ -40,6 +40,7 @@ public class MatchingEngineCommandProducer {
         properties.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, "true"); //Important, prevent message duplication
         properties.put("max.in.flight.requests.per.connection", 5); // Must be less than or equal to 5
         properties.put(ProducerConfig.ACKS_CONFIG, "all");
+        properties.put("client.id", "command-producer");
         return new KafkaProducer<>(properties);
     }
 }
